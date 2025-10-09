@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Little Babies Pawfect Home — Pet Adoption</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Little Babies Pawfect Home</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#pets">Available Pets</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero card">
+      <div>
+        <h2>Find Your New Best Friend</h2>
+        <p>Browse pets available for adoption and connect with loving families.</p>
+        <button id="view-pets" class="btn">View Pets</button>
+      </div>
+      <div class="hero-img">🐾</div>
+    </section>
+
+    <section id="pets" class="card">
+      <h3>Available Pets</h3>
+      <div class="filters">
+        <select id="filter-type">
+          <option value="">All Species</option>
+          <option value="Dog">Dog</option>
+          <option value="Cat">Cat</option>
+          <option value="Other">Other</option>
+        </select>
+        <input id="search" placeholder="Search by Name or Breed" />
+        <button id="apply-filter" class="btn small">Apply</button>
+      </div>
+      <div id="pets-grid" class="pets-grid"></div>
+    </section>
+
+    <section id="about" class="card">
+      <h3>About Us</h3>
+      <p>Pawfect Home helps rescue pets find loving families. We partner with shelters and volunteers.</p>
+    </section>
+
+    <section id="contact" class="card">
+      <h3>Contact</h3>
+      <form id="contact-form">
+        <label>Name <input name="name" required></label>
+        <label>Email <input name="email" type="email" required></label>
+        <label>Message <textarea name="message" required></textarea></label>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+
+    <section id="adopt-modal" class="modal hidden">
+      <div class="modal-content card">
+        <button class="modal-close">✕</button>
+        <h3 id="modal-pet-name">Adopt</h3>
+        <form id="adopt-form">
+          <input type="hidden" name="pet_id">
+          <label>Full Name <input name="fullName" required></label>
+          <label>Phone <input name="phone" required></label>
+          <label>Email <input name="email" type="email" required></label>
+          <label>Why do you want to adopt? <textarea name="reason" required></textarea></label>
+          <label><input type="checkbox" name="agree" required> I agree to care for this pet</label>
+          <button class="btn" type="submit">Submit Adoption Request</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="server.js"></script>
+</body>
+</html>
