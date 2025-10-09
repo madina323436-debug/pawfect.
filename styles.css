@@ -1,0 +1,42 @@
+:root {
+  --bg: #f5f5dc; /* beige background */
+  --card: #fff;
+  --accent: #4aa96c;
+  --muted: #6b7280;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, system-ui, Roboto, sans-serif; background: var(--bg); color: #0f172a; }
+
+header {
+  background: linear-gradient(90deg, var(--accent), #2aa076);
+  color: #fff; padding: 14px 22px; display: flex; justify-content: space-between; align-items: center;
+}
+
+header h1 { margin:0; font-size: 20px; }
+nav a { color: rgba(255,255,255,0.95); text-decoration: none; margin-left: 12px; font-weight:600; }
+
+main { padding: 20px; max-width: 1100px; margin: 18px auto; }
+.card { background: var(--card); padding: 18px; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 6px 20px rgba(15,23,42,0.06); }
+
+.hero { display: flex; gap: 20px; align-items: center; }
+.hero-img { font-size: 64px; }
+
+.pets-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 12px; }
+.pet-card { padding: 10px; border-radius: 10px; border: 1px solid #eef2f6; transition: transform 0.2s; }
+.pet-card:hover { transform: scale(1.03); }
+
+.pet-photo { height: 150px; border-radius: 8px; background: #eee; display: flex; align-items: center; justify-content: center; font-size: 48px; color: #999; }
+
+.pet-meta { margin-top: 8px; }
+.btn { display: inline-block; padding: 8px 12px; border-radius: 8px; border: 0; background: var(--accent); color: #fff; font-weight: 700; cursor: pointer; }
+.btn.small { padding: 6px 10px; font-size: 14px; }
+
+.filters { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+label { display: block; margin: 8px 0; }
+input, textarea, select { width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #d1d5db; }
+
+.modal { position: fixed; inset:0; display:grid; place-items:center; background: rgba(0,0,0,0.35); }
+.modal.hidden { display: none; }
+.modal-content { width: 100%; max-width: 520px; }
+.modal-close { background: transparent; border: 0; cursor:pointer; float: right; font-size: 18px; }
